@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arti Malviya | Web Developer, IT Student & Creative Writer</title>
+  <meta name="description"
+    content="Personal portfolio of Arti Malviya — 2nd Year Integrated M.Tech (IT) student at Indore, frontend web developer, and creative writer.">
+  <meta name="keywords"
+    content="Arti Malviya, Web Developer, IT Student, Indore, Creative Writing, HTML CSS JavaScript, Portfolio">
+  <meta name="author" content="Arti Malviya">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arti Malviya — Web Developer & Creative Writer">
+  <meta property="og:description" content="M.Tech Integrated (IT) student, frontend developer, India.">
+  <meta property="og:image" content="assets/images/profile.jpg">
+
+  <!-- Google Fonts: Outfit, Inter & Newsreader for editorial human touch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Arti Malviya Home">
+        <span class="logo-mark">AM</span>
+        <span class="logo-text">Arti Malviya<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="desktopNav" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#writing" class="nav-link">Writing</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Resume Download CTA -->
+        <a href="assets/Arti_Malviya_Resume.pdf" download="Arti_Malviya_Resume.pdf"
+          class="btn btn-sm btn-outline header-cta" id="quickResumeBtn">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume PDF</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="icon-btn mobile-menu-toggle" aria-label="Toggle navigation menu"
+          aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Nav -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <nav class="mobile-nav-links">
+        <a href="#hero" class="mobile-nav-link">Home</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#education" class="mobile-nav-link">Education</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#writing" class="mobile-nav-link">Writing</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+      <div class="mobile-drawer-socials">
+        <a href="mailto:sarojmalviya23@gmail.com" class="social-chip">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Email Me
+        </a>
+        <a href="assets/Arti_Malviya_Resume.pdf" download="Arti_Malviya_Resume.pdf" class="social-chip">
+          Download CV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Real Location & Status Badge -->
+          <!-- <div class="availability-badge" id="availabilityStatus">
+            <span class="pulsing-dot"></span>
+            <span>📍 Indore, India • 2nd Year M.Tech (IT) Student</span>
+          </div> -->
+
+          <!-- Genuine Headline -->
+          <h1 class="hero-title">
+            Writing code with logic,<br>
+            <span class="serif-italic-accent">words with heart.</span>
+          </h1>
+
+          <p class="hero-bio">
+            Hello! I'm <strong>Arti Malviya</strong>, an Integrated M.Tech (IT) student and creative writer. I love the
+            balance between technical problem-solving in web development and storytelling through words. Currently
+            building responsive web projects and gaining new skills.
+          </p>
+
+          <!-- Human, authentic Call To Actions -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>See My Projects</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="assets/Arti_Malviya_Resume.pdf" download="Arti_Malviya_Resume.pdf" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+            <a href="#contact" class="btn btn-glass">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <!-- Professional Profiles & Contact Strip -->
+          <div class="hero-social-strip">
+            <span class="social-label">Connect</span>
+            <div class="social-icons-wrapper">
+              <a href="mailto:sarojmalviya23@gmail.com" class="social-link" title="Send Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>sarojmalviya23@gmail.com</span>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                title="GitHub Profile">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                title="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real Photo Showcase -->
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-card-glass">
+              <div class="avatar-image-container">
+                <img src="assets/images/profile.jpg" alt="Arti Malviya" class="hero-avatar-img">
+              </div>
+
+              <!-- Real contextual micro-tags
+              <div class="hero-chip chip-top-right">
+                <div class="chip-icon">🎓</div>
+                <div class="chip-text">
+                  <span class="chip-val">8.67 CGPA</span>
+                  <span class="chip-desc">1st Year M.Tech</span>
+                </div>
+              </div>
+
+              <div class="hero-chip chip-bottom-left">
+                <div class="chip-icon">✍️</div>
+                <div class="chip-text">
+                  <span class="chip-val">Writer & Poet</span>
+                  <span class="chip-desc">Poems Writers</span>
+                </div>
+              </div>
+            </div> -->
+
+              <!-- Soft warm ambient glow -->
+              <div class="avatar-card-glow" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real Highlights Strip from Resume -->
+        <div class="container hero-metrics-bar">
+          <div class="metric-item">
+            <span class="metric-number">8.67</span>
+            <span class="metric-label">1st Year M.Tech CGPA</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">5-Yr</span>
+            <span class="metric-label">Integrated IT Program</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">NCC</span>
+            <span class="metric-label">Certified Cadet (2023)</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">Dual</span>
+            <span class="metric-label">Code & Creative Writing</span>
+          </div>
+        </div>
+    </section>
+
+    <!-- Biography & About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Where Technical Curiosity Meets Creative Expression</h2>
+          <p class="section-subtitle">A glimpse into who I am, my academic background, and what drives my work every
+            day.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Real Story Column -->
+          <div class="about-story">
+            <div class="story-card glass-panel">
+              <h3 class="story-heading">My Journey</h3>
+              <p class="story-paragraph">
+                Hi, I'm <strong>Arti Malviya</strong>! I am currently in my 2nd year of the 5-Year Integrated M.Tech in
+                Information Technology based in Indore, Madhya Pradesh. Before my university journey, I completed my
+                schooling at <strong>Jawahar Navodaya Vidyalaya, Chhindwara</strong>, which instilled in me deep values
+                of discipline, curiosity, and teamwork.
+              </p>
+              <p class="story-paragraph">
+                What makes my perspective unique is the intersection of two worlds: <strong>technology and
+                  writing</strong>. I enjoy building clean, accessible web interfaces using HTML, CSS, and JavaScript.
+                At the same time, I am actively engaged as a writer with <em>Poems Writers</em>, where I craft poems,
+                proofread manuscripts.
+              <p class="story-paragraph">
+                I am also certified in NCC (2023) and currently expanding my technical horizons into agentic AI and
+                gaining new skils
+                I believe that whether writing a function or writing a poem, clarity and empathy are the most important
+                elements.
+              </p>
+
+              <!-- Real Pillars -->
+              <div class="core-values">
+                <div class="value-item">
+                  <div class="value-icon">💻</div>
+                  <div>
+                    <h4>Clean Frontend Code</h4>
+                    <p>Writing neat, semantic HTML, modern responsive CSS, and intuitive JavaScript interactions.</p>
+                  </div>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon">✍️</div>
+                  <div>
+                    <h4>Clear Technical & Creative Writing</h4>
+                    <p>Communicating complex thoughts with simplicity, accuracy, and emotional resonance.</p>
+                  </div>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon">🎯</div>
+                  <div>
+                    <h4>Discipline & Dedication</h4>
+                    <p>Rooted in my Navodaya education and NCC training — consistent, reliable, and curious to learn.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Facts & Resume Highlight Card -->
+          <div class="about-highlights">
+            <div class="glass-panel highlights-card">
+              <h3 class="highlights-title">Snapshot</h3>
+              <ul class="highlight-list">
+                <li>
+                  <span class="hl-label">Current Role:</span>
+                  <span class="hl-val">2nd Year M.Tech (IT) Student</span>
+                </li>
+                <li>
+                  <span class="hl-label">Location:</span>
+                  <span class="hl-val">Indore, India (452001)</span>
+                </li>
+                <li>
+                  <span class="hl-label">College CGPA:</span>
+                  <span class="hl-val highlight-green">8.67 (Sem 1: 8.54 | Sem 2: 8.85)</span>
+                </li>
+                <li>
+                  <span class="hl-label">School:</span>
+                  <span class="hl-val">J.N.V. Chhindwara (M.P.)</span>
+                </li>
+                <li>
+                  <span class="hl-label">Email:</span>
+                  <span class="hl-val">sarojmalviya23@gmail.com</span>
+                </li>
+                <li>
+                  <span class="hl-label">Languages:</span>
+                  <span class="hl-val">Hindi (Native C2) • English (B1)</span>
+                </li>
+              </ul>
+
+              <!-- Download & Connect actions -->
+              <div class="highlights-actions">
+                <a href="assets/Arti_Malviya_Resume.pdf" download="Arti_Malviya_Resume.pdf"
+                  class="btn btn-primary btn-block">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Download Resume (PDF)</span>
+                </a>
+                <button class="btn btn-outline btn-block" id="copyEmailBtn">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copy Email: sarojmalviya23@gmail.com</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Authentic Personal Quote Card -->
+            <div class="quote-card glass-panel">
+              <span class="quote-mark">“</span>
+              <p class="quote-text">Code brings logic to life on the screen; words give life and meaning to thought.
+                True craft happens when both work together.</p>
+              <span class="quote-author">— Arti Malviya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Education & Milestones Section -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education & Milestones</h2>
+          <p class="section-subtitle">My academic track record and certified training.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+
+          <!-- Education 1: M.Tech -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">M.Tech in Information Technology (5-Year Integrated)</h3>
+                  <span class="timeline-company">Indore, Madhya Pradesh</span>
+                </div>
+                <span class="timeline-period">2024 — Present</span>
+              </div>
+              <p class="timeline-desc">
+                Currently in <strong>2nd Year</strong>. Maintaining strong academic excellence across computer science,
+                information theory, algorithms, and web technologies.
+              </p>
+              <div class="academic-badge-row">
+                <span class="academic-pill"><strong>1st Year CGPA:</strong> 8.67</span>
+                <span class="academic-pill">Semester 1 SGPA: 8.54</span>
+                <span class="academic-pill">Semester 2 SGPA: 8.85</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education 2: Schooling -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">High School Diploma (Science & Math)</h3>
+                  <span class="timeline-company">Jawahar Navodaya Vidyalaya, Chhindwara (M.P.)</span>
+                </div>
+                <span class="timeline-period">Graduated 2024</span>
+              </div>
+              <p class="timeline-desc">
+                Completed secondary education with distinction from Jawahar Navodaya Vidyalaya. Active participant in
+                cultural writing competitions, speech, and sports.
+              </p>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Key Certifications & Achievements</h3>
+                  <span class="timeline-company">National Cadets & Technical Training</span>
+                </div>
+                <span class="timeline-period">2023 — 2026</span>
+              </div>
+              <div class="cert-grid">
+                <div class="cert-item">
+                  <div class="cert-icon">🎖️</div>
+                  <div>
+                    <strong>NCC Certification (National Cadet Corps)</strong>
+                    <span class="cert-date">April 2023</span>
+                    <p>Demonstrated leadership, discipline, drill training, and community service.</p>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-icon">📊</div>
+                  <div>
+                    <strong>Agentic AI</strong>
+                    <span class="cert-date">July 2026</span>
+                    <p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Skills Section from Resume -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Skills</span>
+          <h2 class="section-title">What I Bring to the Table</h2>
+          <p class="section-subtitle">Skills honed through coursework, self-driven projects, and creative writing
+            practice.</p>
+        </div>
+
+        <!-- Skills Filter / Search Bar -->
+        <div class="skills-filter-bar">
+          <div class="filter-tabs" role="tablist" aria-label="Skills Categories">
+            <button class="filter-tab active" data-category="all" role="tab" aria-selected="true">All Skills</button>
+            <button class="filter-tab" data-category="web" role="tab" aria-selected="false">Web & Code</button>
+            <!-- <button class="filter-tab" data-category="writing" role="tab" aria-selected="false">Writing &
+              Content</button> -->
+            <!-- <button class="filter-tab" data-category="data" role="tab" aria-selected="false">Data & Tools</button> -->
+          </div>
+
+          <div class="skills-search-wrapper">
+            <input type="text" id="skillSearchInput" placeholder="Filter skills (e.g. JavaScript, Writing...)"
+              aria-label="Search skills">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Skills Category Grid -->
+        <div class="skills-categories-grid">
+          <!-- Web Development Category -->
+          <div class="skill-category-card glass-panel" data-cat="web">
+            <div class="cat-header">
+              <div class="cat-icon-badge">🌐</div>
+              <div>
+                <h3 class="cat-title">Web Development</h3>
+                <span class="cat-count">Frontend & Web Technologies</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <div class="skill-pill" data-name="html5 markup semantic">
+                <span class="skill-name">Semantic HTML5</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-pill" data-name="css3 styling flexbox grid">
+                <span class="skill-name">Modern CSS3 (Flexbox & Grid)</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-pill" data-name="javascript es6 dom interactive">
+                <span class="skill-name">JavaScript (ES6+ & DOM)</span>
+                <span class="skill-level">Intermediate</span>
+              </div>
+              <div class="skill-pill" data-name="responsive web design mobile friendly">
+                <span class="skill-name">Responsive Web Design</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-pill" data-name="ui ux layout design">
+                <span class="skill-name">UI / UX Layout Prototyping</span>
+                <span class="skill-level">Active Practice</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Creative & Technical Writing
+          <div class="skill-category-card glass-panel" data-cat="writing">
+            <div class="cat-header">
+              <div class="cat-icon-badge">✒️</div>
+              <div>
+                <h3 class="cat-title">Writing & Communication</h3>
+                <span class="cat-count">Content, Editing & Narrative</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <div class="skill-pill" data-name="creative writing poetry storytelling">
+                <span class="skill-name">Creative Writing & Poetry</span>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <div class="skill-pill" data-name="editing proofreading grammar precision">
+                <span class="skill-name">Editing & Proofreading</span>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <div class="skill-pill" data-name="technical documentation guides">
+                <span class="skill-name">Technical Documentation</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-pill" data-name="research factual accuracy">
+                <span class="skill-name">In-Depth Content Research</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-pill" data-name="grammar usage vocabulary">
+                <span class="skill-name">Grammar & Tone Refinement</span>
+                <span class="skill-level">Expert</span>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Data Science & Core Computing -->
+          <!-- <div class="skill-category-card glass-panel" data-cat="data">
+            <div class="cat-header">
+              <div class="cat-icon-badge">📈</div>
+              <div>
+                <h3 class="cat-title">Data Science & Computing</h3>
+                <span class="cat-count">Analytics & IT Fundamentals</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <div class="skill-pill" data-name="data science machine learning python">
+                <span class="skill-name">Data Science & Machine Learning</span>
+                <span class="skill-level">Certified</span>
+              </div>
+              <div class="skill-pill" data-name="python programming logic">
+                <span class="skill-name">Python Basics & Analytics</span>
+                <span class="skill-level">Intermediate</span>
+              </div>
+              <div class="skill-pill" data-name="git github version control">
+                <span class="skill-name">Git & GitHub Basics</span>
+                <span class="skill-level">Intermediate</span>
+              </div>
+              <div class="skill-pill" data-name="problem solving algorithms computer science">
+                <span class="skill-name">CS Fundamentals & Algorithms</span>
+                <span class="skill-level">Academic Strong</span>
+              </div>
+            </div>
+          </div>  -->
+
+          <!-- Personal Strengths & Languages -->
+          <div class="skill-category-card glass-panel" data-cat="writing">
+            <div class="cat-header">
+              <div class="cat-icon-badge">🗣️</div>
+              <div>
+                <h3 class="cat-title">Languages & Discipline</h3>
+                <span class="cat-count">Communication & Values</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <div class="skill-pill" data-name="hindi native bilingual proficient">
+                <span class="skill-name">Hindi</span>
+                <span class="skill-level">Native / Proficient (C2)</span>
+              </div>
+              <div class="skill-pill" data-name="english intermediate writing reading">
+                <span class="skill-name">English</span>
+                <span class="skill-level">Intermediate (B1)</span>
+              </div>
+              <div class="skill-pill" data-name="ncc leadership team work">
+                <span class="skill-name">Leadership & Team Collaboration</span>
+                <span class="skill-level">NCC Certified</span>
+              </div>
+              <div class="skill-pill" data-name="client communication brand messaging">
+                <span class="skill-name">scripting</span>
+                <span class="skill-level">Practiced</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Handcrafted Projects</h2>
+          <p class="section-subtitle">Real web applications and digital experiments created with care.</p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="project-filters" role="tablist" aria-label="Project Category Filter">
+          <button class="project-filter-btn active" data-filter="all">All Projects</button>
+          <button class="project-filter-btn" data-filter="web">Web Development</button>
+          <button class="project-filter-btn" data-filter="writing">Writing & Content</button>
+          <!-- <button class="project-filter-btn" data-filter="data">Data & ML</button> -->
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1: Akshar Poetry & Writing Showcase -->
+          <article class="project-card glass-panel" data-project-category="writing">
+            <div class="project-image-box">
+              <img src="assets/images/project1.jpg" alt="Akshar Poetry & Literature Platform" loading="lazy"
+                class="project-thumbnail">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" data-project-id="1">
+                  <span>View Details</span>
+                </button>
+              </div>
+              <span class="project-badge badge-featured">Writing & Web</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-cat">Literature & Web</span>
+                <span class="project-year">2026</span>
+              </div>
+
+              <h3 class="project-title">Akshar — Minimalist Poetry & Literary Hub</h3>
+
+              <p class="project-description">
+                A clean, distraction-free digital reading space designed for Hindi and English poems and creative
+                writing, featuring reader theme switches, typography adjustments, and author notes.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">Modern CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Editorial Design</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#projects" class="btn btn-sm btn-primary open-modal-btn" data-project-id="1">
+                  <span>Read Details</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Student IT Study Portal & Snippets -->
+          <article class="project-card glass-panel" data-project-category="web">
+            <div class="project-image-box">
+              <img src="assets/images/project2.jpg" alt="IT Study Portal and Snippets" loading="lazy"
+                class="project-thumbnail">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" data-project-id="2">
+                  <span>View Details</span>
+                </button>
+              </div>
+              <span class="project-badge badge-active">Active Project</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-cat">Web Application</span>
+                <span class="project-year">2026</span>
+              </div>
+
+              <h3 class="project-title">DevCampus — IT Students Learning & Notes Hub</h3>
+
+              <p class="project-description">
+                A responsive web directory built to organize semester subject notes, data structures cheat sheets, and
+                practical lab assignments for Information Technology students.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">LocalStorage</span>
+                <span class="tag">Responsive UI</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#projects" class="btn btn-sm btn-primary open-modal-btn" data-project-id="2">
+                  <span>Read Details</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Data Science & ML Text Insights
+          <article class="project-card glass-panel" data-project-category="data">
+            <div class="project-image-box">
+              <img src="assets/images/project3.jpg" alt="Data Science Sentiment Visualizer" loading="lazy"
+                class="project-thumbnail">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" data-project-id="3">
+                  <span>View Details</span>
+                </button>
+              </div>
+              <span class="project-badge badge-client">Data & ML</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-cat">Data Science & ML</span>
+                <span class="project-year">2026</span>
+              </div>
+
+              <h3 class="project-title">TextSense — Literary Sentiment & Reader Analytics</h3>
+
+              <p class="project-description">
+                An exploratory machine learning project analyzing emotion, vocabulary depth, and sentiment patterns in
+                Hindi and English creative writing manuscripts.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">NLP Basics</span>
+                <span class="tag">Data Visuals</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#projects" class="btn btn-sm btn-primary open-modal-btn" data-project-id="3">
+                  <span>Read Details</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article> -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Writing & Poems Showcase Section -->
+    <!-- <section class="section writing-section" id="writing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Creative Corner</span>
+          <h2 class="section-title">Words, Poems & Experiences</h2>
+          <p class="section-subtitle">A glimpse into my work as a writer with Poems Writers and my personal creative
+            thoughts.</p>
+        </div>
+
+        <div class="writing-cards-grid">
+          <div class="writing-card glass-panel">
+            <span class="writing-category">Poetry & Reflection</span>
+            <h3 class="writing-card-title">शब्दातीत — Unspoken Thoughts</h3>
+            <p class="writing-excerpt">
+              "कभी लफ्ज़ कम पड़ जाते हैं जज़्बात बयां करने में,<br>
+              कभी खामोशी ही सबसे खूबसूरत दास्तान कह जाती है..."
+            </p>
+            <span class="writing-note">Published with Poems Writers, Indore</span>
+          </div>
+
+          <div class="writing-card glass-panel">
+            <span class="writing-category">Experience & Editorial</span>
+            <h3 class="writing-card-title">Content Editing & Proofreading</h3>
+            <p class="writing-excerpt">
+              Refining manuscripts, adjusting tone, and ensuring grammatical accuracy. Collaborating with clients to
+              develop compelling narratives across digital platforms.
+            </p>
+            <span class="writing-note">Work History • Sep 2025 – Present</span>
+          </div>
+
+          <div class="writing-card glass-panel">
+            <span class="writing-category">Personal Interests</span>
+            <h3 class="writing-card-title">Beyond the Code</h3>
+            <p class="writing-excerpt">
+              When away from the laptop, I find balance in <strong>creative writing, dancing, and playing outdoor
+                games</strong>. These activities keep my imagination fresh and my mind focused.
+            </p>
+            <span class="writing-note">Interests & Life Balance</span>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Connect & Talk</h2>
+          <p class="section-subtitle">Whether it's about a web development project, creative writing collaboration, or
+            academic discussions — I'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Column -->
+          <div class="contact-info-col">
+            <div class="glass-panel contact-card">
+              <h3 class="contact-card-title">Direct Contact & Channels</h3>
+              <p class="contact-card-sub">Feel free to reach out directly via email or check my profiles:</p>
+
+              <div class="contact-channels-list">
+                <!-- Direct Email -->
+                <a href="mailto:sarojmalviya23@gmail.com" class="contact-channel-item">
+                  <div class="channel-icon email-icon">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="channel-info">
+                    <span class="channel-name">Primary Email</span>
+                    <span class="channel-detail">sarojmalviya23@gmail.com</span>
+                  </div>
+                  <span class="channel-arrow">→</span>
+                </a>
+
+                <!-- Location -->
+                <div class="contact-channel-item">
+                  <div class="channel-icon loc-icon">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="channel-info">
+                    <span class="channel-name">Location</span>
+                    <span class="channel-detail">Indore, Madhya Pradesh 452001</span>
+                  </div>
+                </div>
+
+                <!-- GitHub -->
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                  <div class="channel-icon github-icon">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                  </div>
+                  <div class="channel-info">
+                    <span class="channel-name">GitHub</span>
+                    <span class="channel-detail">Web development projects</span>
+                  </div>
+                  <span class="channel-arrow">→</span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                  <div class="channel-icon linkedin-icon">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  </div>
+                  <div class="channel-info">
+                    <span class="channel-name">LinkedIn</span>
+                    <span class="channel-detail">Professional network & updates</span>
+                  </div>
+                  <span class="channel-arrow">→</span>
+                </a>
+              </div>
+
+              <!-- Quick Resume Box -->
+              <div class="work-status-box">
+                <div class="status-indicator">
+                  <span class="radar-dot"></span>
+                  <strong>Open for Opportunities</strong>
+                </div>
+                <p class="status-text">Available for web internships, writing projects, and academic collaborations.</p>
+                <a href="assets/Arti_Malviya_Resume.pdf" download="Arti_Malviya_Resume.pdf"
+                  class="btn btn-sm btn-outline btn-block" style="margin-top: 0.75rem;">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Download Official Resume PDF</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="contact-form-col">
+            <div class="glass-panel form-card">
+              <h3 class="form-title">Send a Note</h3>
+              <p class="form-subtitle">Drop a message or leave a thought here:</p>
+
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="userName">Your Name <span class="required">*</span></label>
+                    <input type="text" id="userName" name="name" required placeholder="Your name" autocomplete="name">
+                    <span class="field-error" id="nameError"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="userEmail">Email Address <span class="required">*</span></label>
+                    <input type="email" id="userEmail" name="email" required placeholder="your.email@example.com"
+                      autocomplete="email">
+                    <span class="field-error" id="emailError"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="userSubject">Subject</label>
+                  <input type="text" id="userSubject" name="subject" placeholder="Project inquiry / Quick hello"
+                    autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                  <label for="userMessage">Message <span class="required">*</span></label>
+                  <textarea id="userMessage" name="message" rows="5" required
+                    placeholder="Write your message here..."></textarea>
+                  <span class="field-error" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit" id="submitFormBtn">
+                  <span>Send Message</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Polished Minimal Human Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="logo-mark">AM</span>
+          <span class="logo-text">Arti Malviya</span>
+        </a>
+        <p class="footer-copy">Student, Web Developer & Writer based in Indore, India. Handcrafted with semantic HTML,
+          CSS & JavaScript.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="mailto:sarojmalviya23@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18"
+            fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg></a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg
+            viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg
+            viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span id="currentYear">2026</span> Arti Malviya. Crafted with care & passion.</span>
+        <a href="#hero" class="back-to-top" aria-label="Scroll to top of page">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalProjectTitle">
+    <div class="modal-window glass-panel">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close project modal">&times;</button>
+      <div class="modal-content" id="modalContent">
+        <!-- Content will be dynamically inserted via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
